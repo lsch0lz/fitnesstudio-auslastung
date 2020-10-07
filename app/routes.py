@@ -7,9 +7,12 @@ from selenium import webdriver
 @app.route('/')
 @app.route('/index')
 def index():
-    var = get_auslastung()
-    return render_template('index.html', var=var)
+    return render_template('index.html')
 
+@app.route('/berlin-lichtenberg')
+def berlinlichtenberg():
+    var = get_auslastung()
+    return render_template('berlin-lichtenberg.html', var=var)
 
 
 
@@ -42,8 +45,3 @@ def get_auslastung():
             pass
 
 
-
-
-
-#bot = Daten()
-#bot.get_auslastung()
