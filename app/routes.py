@@ -22,6 +22,22 @@ def berlincharlottenburg():
     return render_template('berlin-charlottenburg.html', var=var)
 
 
+@app.route('/berlin-lichterfelde')
+def berlincharlottenburg():
+    studio = "berlin-lichterfelde"
+    var = get_auslastung(studio)
+    return render_template('berlin-lichterfelde.html', var=var)
+
+
+@app.route('/berlin-mitte')
+def berlincharlottenburg():
+    studio = "berlin-mitte"
+    var = get_auslastung(studio)
+    return render_template('berlin-mitte.html', var=var)
+
+
+
+
 
 def get_auslastung(studio):
     try:
